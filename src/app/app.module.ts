@@ -8,25 +8,41 @@ import { HeaderComponent } from './modules/core/components/header/header.compone
 import { HomeComponent } from './modules/core/components/home/home.component';
 
 //import { RoomBookingComponent } from './modules/booking/components/room-booking.component';
-import { MembershipComponent } from './modules/shared/components/membership/membership.component';
+
+import { HttpUserService } from './modules/users/services/http-user-service';
+import { UsersModule } from './modules/users/users.module';
 import { GalleryComponent } from './modules/booking/components/gallery/gallery.component';
-import { BookingModule } from './modules/booking/booking.module';
+import { HeaderComponent } from './modules/core/components/header/header.component';
+import { SharedModule } from './modules/shared/shared.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+
     HeaderComponent,
     FooterComponent,
     HomeComponent,
     MembershipComponent,
     GalleryComponent,
+
+   
+    HeaderComponent
+
+    //CompareDirective,
+
          ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+
+    UsersModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+    {provide:"UserService",useClass:HttpUserService}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
