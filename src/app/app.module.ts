@@ -9,6 +9,8 @@ import { HomeComponent } from './modules/core/components/home/home.component';
 
 //import { RoomBookingComponent } from './modules/booking/components/room-booking.component';
 import { MembershipComponent } from './modules/shared/components/membership/membership.component';
+import { GalleryComponent } from './drc/app/modules/booking/components/gallery/gallery.component';
+import { BookingModule } from './modules/booking/booking.module';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { MembershipComponent } from './modules/shared/components/membership/memb
     FooterComponent,
     HomeComponent,
     MembershipComponent,
+    GalleryComponent,
          ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BookingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
