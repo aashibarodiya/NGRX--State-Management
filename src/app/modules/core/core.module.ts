@@ -17,6 +17,7 @@ import { UsersModule } from '../users/users.module';
 @NgModule({
   declarations: [
 
+
   
     HeaderComponent,
     FooterComponent,
@@ -30,6 +31,7 @@ import { UsersModule } from '../users/users.module';
     CommonModule,
     SharedModule,
     UsersModule
+
   ]
 })
 export class CoreModule { }
