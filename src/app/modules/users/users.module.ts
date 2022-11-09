@@ -5,7 +5,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpUserService } from './services/http-user-service';
-import { CompareDirective } from '../shared/directives/compare.directive';
 
 
 
@@ -13,7 +12,7 @@ import { CompareDirective } from '../shared/directives/compare.directive';
   declarations: [
     LoginComponent,
     RegisterComponent,
-    CompareDirective
+  
  
   ],
   imports: [
@@ -24,7 +23,7 @@ import { CompareDirective } from '../shared/directives/compare.directive';
   exports:[
     LoginComponent,
     RegisterComponent,
-    CompareDirective
+
 
   ]
 })

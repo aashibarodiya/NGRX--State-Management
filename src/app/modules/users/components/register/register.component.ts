@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { compare } from 'src/app/modules/shared/directives/compare.directive';
+//import { compare } from 'src/app/modules/shared/directives/compare.directive';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
       aadhaarId:['',Validators.required]
     
     },
-    {validator: compare('password','confirmPassword')}
+    //{validator: compare('password','confirmPassword')}
     );
   }
   /*
