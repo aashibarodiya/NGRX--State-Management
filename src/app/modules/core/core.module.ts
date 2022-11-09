@@ -22,7 +22,11 @@ import { UsersModule } from '../users/users.module';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 50ff13c45ab7803d2d291c467cdc0c8b7da95db0
+=======
+
+>>>>>>> 03739fe6076a71febcd31f9e7a52b6746be76028
   
     HeaderComponent,
     FooterComponent,
@@ -39,6 +43,7 @@ import { UsersModule } from '../users/users.module';
     CommonModule,
     SharedModule,
     UsersModule
+
   ]
 })
 export class CoreModule { }
