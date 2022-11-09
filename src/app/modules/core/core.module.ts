@@ -16,6 +16,7 @@ import { UsersModule } from '../users/users.module';
 
 @NgModule({
   declarations: [
+
   
     HeaderComponent,
     FooterComponent,
@@ -23,6 +24,7 @@ import { UsersModule } from '../users/users.module';
     MembershipComponent,
     LoginComponent,
     RegisterComponent
+
   ],
   imports: [
     CommonModule,
