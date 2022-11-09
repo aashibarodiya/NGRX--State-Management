@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpUserService } from './services/http-user-service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -18,7 +20,9 @@ import { HttpUserService } from './services/http-user-service';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   exports:[
     LoginComponent,

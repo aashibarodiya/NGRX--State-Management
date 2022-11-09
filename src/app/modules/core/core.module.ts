@@ -1,25 +1,33 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentsComponent } from './components/components.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { UsersComponent } from './users/users.component';
-import { RoomBookingComponent } from './room-booking/room-booking.component';
+
+
 import { HomeComponent } from './components/home/home.component';
+import { MembershipComponent } from '../shared/components/membership/membership.component';
+import { SharedModule } from '../shared/shared.module';
+import { LoginComponent } from '../users/components/login/login.component';
+import { RegisterComponent } from '../users/components/register/register.component';
+import { UsersModule } from '../users/users.module';
 
 
 
 @NgModule({
   declarations: [
-    ComponentsComponent,
+  
     HeaderComponent,
     FooterComponent,
-    UsersComponent,
-    RoomBookingComponent,
-    HomeComponent
+    HomeComponent,
+    MembershipComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    UsersModule
   ]
 })
 export class CoreModule { }
