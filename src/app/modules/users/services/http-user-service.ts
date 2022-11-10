@@ -5,7 +5,7 @@ import { LoggedInDetails, LoginInfo, User } from "../models/user";
 import { UserService } from "./user.service";
 
 
-const baseUrl='http://localhost:5000/api/users';
+const baseUrl='https://localhost:5000/api/users';
 
 @Injectable()
 export class HttpUserService implements UserService{

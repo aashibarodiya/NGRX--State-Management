@@ -11,8 +11,9 @@ import { UserService } from '../../services/user.service';
 })
 export class LoginComponent implements OnInit {
  
+  
   constructor(
-  //  @Inject("UserService") private userService: UserService,
+    @Inject("UserService") private userService: UserService,
     private router: Router
   ) { }
 
@@ -27,32 +28,34 @@ export class LoginComponent implements OnInit {
   statusStyle?:string;
 
    handleLogin(){
-   
-        // (<Observable<LoggedInDetails>>(this.userService
-        // .login(this.loginInfo)))
-        // .subscribe({
-        //   next: (info:LoggedInDetails)=>{ 
-        //     const user=info.user;
-        //     console.log('user',user);
-        //     this.status=`Welcome ${user.name}`;
-        //     this.statusStyle='text-success';
-        //     this.router.navigate(['/author/list']);
-        //   },
-        //   error: (error:any)=>{
-        //     this.status=`Error: ${error.status}`;
-        //     this.statusStyle='text-danger';
-        //   }
-        }
-        //);
+    
 
-        // this.status='please wait...';
-        // this.statusStyle='text-primary';
+        (<Observable<LoggedInDetails>>(this.userService
+        .login(this.loginInfo)))
+        .subscribe({
+          next: (info:any)=>{ 
+            console.log(info);
+            const user=info.email;
+            console.log('user',user);
+            this.status=`Welcome ${user.name}`;
+            this.statusStyle='text-success';
+            this.router.navigate(['home']);
+          },
+          error: (error:any)=>{
+            this.status=`Error: ${error.status}`;
+            this.statusStyle='text-danger';
+          }
+        });
+
+        this.status='please wait...';
+        this.statusStyle='text-primary';
 
 
-  
+  }
 
   ngOnInit(): void {
   }
+
 }
 
 
