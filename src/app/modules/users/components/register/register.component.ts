@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
   * Constructor for Registration Component
   */
   constructor(private builder :FormBuilder,
-             //@Inject("UserService") private userService:UserService,
+             @Inject("UserService") private userService:UserService,
               private router:Router
               ) {
 
@@ -77,20 +77,20 @@ export class RegisterComponent implements OnInit {
     
     };
     console.log('registering', this.user);
-      // (<Observable<User>>(this
-      //   .userService
-      //   .register(this.user!)
-      //   ))
-      //   .pipe(
-      //     tap((response:any)=>console.log('response',response)),
-      //   )
-      //   .subscribe({
-      //     next:(user:any)=>{
-      //     console.log('registered', user);
-      //     this.router.navigate(['/user/login']);
-      //   },
-      //   error:error=> console.log('error',error)
-      // })   
+      (<Observable<User>>(this
+        .userService
+        .register(this.user!)
+        ))
+        .pipe(
+          tap((response:any)=>console.log('response',response)),
+        )
+        .subscribe({
+          next:(user:any)=>{
+          console.log('registered', user);
+          this.router.navigate(['/user/login']);
+        },
+        error:error=> console.log('error',error)
+      })   
   }
 
   ngOnInit(): void {
