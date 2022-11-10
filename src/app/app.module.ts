@@ -12,7 +12,7 @@ import { HomeComponent } from './modules/core/components/home/home.component';
 import { HttpUserService } from './modules/users/services/http-user-service';
 import { UsersModule } from './modules/users/users.module';
 import { GalleryComponent } from './modules/booking/components/gallery/gallery.component';
-import { HeaderComponent } from './modules/core/components/header/header.component';
+
 import { SharedModule } from './modules/shared/shared.module';
 
 
@@ -23,7 +23,7 @@ import { SharedModule } from './modules/shared/shared.module';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MembershipComponent,
+    
     GalleryComponent,
 
    

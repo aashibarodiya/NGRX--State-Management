@@ -14,7 +14,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     AppRoutingModule
   ],
   exports:[
-MembershipComponent
+    MembershipComponent
   ]
 })
 export class SharedModule { }

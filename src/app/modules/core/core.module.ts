@@ -28,7 +28,8 @@ import { UsersModule } from '../users/users.module';
   imports: [
     CommonModule,
     SharedModule,
-    UsersModule
+    UsersModule,
+    MembershipComponent
   ]
 })
 export class CoreModule { }

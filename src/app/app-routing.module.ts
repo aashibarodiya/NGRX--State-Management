@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GalleryComponent } from './modules/booking/components/gallery/gallery.component';
 
 import { HomeComponent } from './modules/core/components/home/home.component';
 import { LoginComponent } from './modules/users/components/login/login.component';
