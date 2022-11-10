@@ -8,11 +8,9 @@ import { UserService } from 'src/app/modules/users/services/user.service';
 })
 export class MembershipComponent implements OnInit {
 
-  user?:any;
-  
+  user?:any;  
 
-  constructor(@Inject("UserService")private userService: UserService) { }
-  
+  constructor(@Inject("UserService")private userService: UserService) { }  
 
   updateUserStatus(details:any): void {
     
