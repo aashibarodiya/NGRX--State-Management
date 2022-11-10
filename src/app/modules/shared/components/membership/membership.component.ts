@@ -49,7 +49,5 @@ export class MembershipComponent implements OnInit {
     await this.userService.logOut();
   }
 
-  async doDummyLogin(){
-    await this.userService.login({email:'tanya@storian.com',password:'pass#1'});
-  }
+  
 }
