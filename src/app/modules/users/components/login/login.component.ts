@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
 })
 export class LoginComponent implements OnInit {
  
-  
+  componentName="Login"
   constructor(
     @Inject("UserService") private userService: UserService,
     private router: Router

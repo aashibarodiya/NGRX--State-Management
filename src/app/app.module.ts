@@ -39,6 +39,7 @@ import { SharedModule } from './modules/shared/shared.module';
     UsersModule,
     SharedModule
   ],
+  
   providers: [
     {provide:"UserService",useClass:HttpUserService}
 
